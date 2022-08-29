@@ -6,7 +6,7 @@ import org.example.services.IPersonaService;
 import org.example.utilities.DatosRandom;
 import org.modelmapper.ModelMapper;
 
-public class PersonaServiceImpl implements IPersonaService {
+public class PersonaServiceImpl implements IPersonaService<PersonaDTO> {
 
     DatosRandom datosRandom = new DatosRandom();
     private PersonaMapper mapper;

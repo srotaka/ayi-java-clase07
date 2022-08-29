@@ -1,16 +1,16 @@
 package org.example.services.impl;
 
 import org.example.dtos.ClienteDTO;
-import org.example.services.IClienteService;
+import org.example.services.IPersonaService;
 import org.example.utilities.DatosRandom;
 
 
-public class ClienteServiceImpl implements IClienteService {
+public class ClienteServiceImpl implements IPersonaService<ClienteDTO> {
 
     DatosRandom datosRandom = new DatosRandom();
 
     @Override
-    public void insertCliente(ClienteDTO clienteDTO) {
+    public void insert(ClienteDTO clienteDTO) {
         clienteDTO.setId(datosRandom.idRandom());
         clienteDTO.setNombre(datosRandom.nombreRandom());
         clienteDTO.setApellido(datosRandom.apellidoRandom());
@@ -27,7 +27,7 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
-    public void updateCliente(ClienteDTO clienteDTO) {
+    public void update(ClienteDTO clienteDTO) {
 
         if(clienteDTO.getActive() != false) {
             clienteDTO.setDireccion(datosRandom.direccionRandom());
@@ -58,7 +58,7 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
-    public void deleteCliente(ClienteDTO clienteDTO) {
+    public void delete(ClienteDTO clienteDTO) {
         if(clienteDTO.getActive() == true) {
             clienteDTO.setActive(false);
             System.out.println("\nEliminando datos del Cliente Nº " + clienteDTO.getId() +
