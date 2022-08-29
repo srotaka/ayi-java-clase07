@@ -5,7 +5,7 @@ import org.example.dtos.PersonaDTO;
 import org.example.services.IPersonaService;
 import org.example.utilities.DatosRandom;
 
-public class EmpleadoServiceImpl implements IPersonaService {
+public class EmpleadoServiceImpl implements IPersonaService<EmpleadoDTO> {
 
     DatosRandom datosRandom = new DatosRandom();
 
@@ -23,7 +23,7 @@ public class EmpleadoServiceImpl implements IPersonaService {
                     "\n\t- Nombre: " + empleadoDTO.getNombre() +
                     "\n\t- Apellido: " + empleadoDTO.getApellido() +
                     "\n\t- Sueldo: US$ " + empleadoDTO.getSueldo() +
-                    "\n\t- Departamento: " + empleadoDTO.getDepartamento());
+                    "\n\t- Puesto: " + empleadoDTO.getDepartamento());
     }
 
     @Override
@@ -37,7 +37,7 @@ public class EmpleadoServiceImpl implements IPersonaService {
                     "\n\t- Nombre: " + empleadoDTO.getNombre() +
                     "\n\t- Apellido: " + empleadoDTO.getApellido() +
                     "\n\t- Sueldo: US$ " + empleadoDTO.getSueldo() +
-                    "\n\t- Departamento: " + empleadoDTO.getDepartamento());
+                    "\n\t- Puesto: " + empleadoDTO.getDepartamento());
         } else{
             System.out.println("\nERROR: No se ha podido procesar el cambio de datos. " +
                     "\n\tEl empleado no forma parte de la compañía." +
@@ -53,7 +53,7 @@ public class EmpleadoServiceImpl implements IPersonaService {
                 "\n\t- Apellido: " + empleadoDTO.getApellido() +
                 "\n\t- Ciudad: " + empleadoDTO.getCiudad()+
                 "\n\t- Sueldo: US$ " + empleadoDTO.getSueldo() +
-                "\n\t- Departamento: " + empleadoDTO.getDepartamento() +
+                "\n\t- Puesto: " + empleadoDTO.getDepartamento() +
                 "\n\t- Empleado Activo: " + empleadoDTO.getActive());
     }
 

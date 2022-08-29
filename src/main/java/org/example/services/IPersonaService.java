@@ -1,11 +1,9 @@
 package org.example.services;
 
-import org.example.dtos.PersonaDTO;
-
-public interface IPersonaService {
-    void insert(PersonaDTO personaDTO);
-    void update(PersonaDTO personaDTO);
-    void getAllInfo(PersonaDTO personaDTO);
-    void delete(PersonaDTO personaDTO);
+public interface IPersonaService <T> {
+    void insert(T clase);
+    void update(T clase);
+    void getAllInfo(T clase);
+    void delete(T clase);
 
 }

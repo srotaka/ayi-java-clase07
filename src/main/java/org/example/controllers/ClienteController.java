@@ -1,26 +1,27 @@
 package org.example.controllers;
 
 import org.example.dtos.ClienteDTO;
-import org.example.services.IClienteService;
+import org.example.services.IPersonaService;
 import org.example.services.impl.ClienteServiceImpl;
+import org.example.services.impl.PersonaServiceImpl;
 
 public class ClienteController {
 
-    private IClienteService iClienteService = new ClienteServiceImpl();
+    private IPersonaService clienteService = new ClienteServiceImpl();
 
     public void insertCliente(ClienteDTO clienteDTO){
-        iClienteService.insertCliente(clienteDTO);
+        clienteService.insert(clienteDTO);
     }
 
     public void updateCliente(ClienteDTO clienteDTO){
-        iClienteService.updateCliente(clienteDTO);
+        clienteService.update(clienteDTO);
     }
 
     public void getAllInfo(ClienteDTO clienteDTO){
-        iClienteService.getAllInfo(clienteDTO);
+        clienteService.getAllInfo(clienteDTO);
     }
 
     public void deleteCliente(ClienteDTO clienteDTO){
-        iClienteService.deleteCliente(clienteDTO);
+        clienteService.delete(clienteDTO);
     }
 }
