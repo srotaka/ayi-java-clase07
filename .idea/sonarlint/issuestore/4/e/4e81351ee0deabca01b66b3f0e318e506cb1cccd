@@ -1,0 +1,29 @@
+
+s
+java:S1192,"VDefine a constant instead of duplicating this literal "
+\t- Cliente Activo: " 3 times.(îÉá8ãŒ–¦®0
+d
+java:S1192"NDefine a constant instead of duplicating this literal "
+\t- Ciudad: " 3 times.(¹ö›à
+d
+java:S1192"NDefine a constant instead of duplicating this literal "
+\t- Nombre: " 3 times.(Ş‘·ä
+h
+java:S1192"RDefine a constant instead of duplicating this literal "
+\t- DirecciÃ³n: " 3 times.(²®Ï
+f
+java:S1192"PDefine a constant instead of duplicating this literal "
+\t- Apellido: " 3 times.(æÏè
+L
+java:S5411 "*Use the primitive boolean expression here.(¤œ†£üÿÿÿÿ8ã•¦®0
+G
+java:S5411>"*Use the primitive boolean expression here.(ÒÇê¦8ã•¦®0
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Áì€¾
+B
+java:S1125 "'Remove the unnecessary boolean literal.(¤œ†£üÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(›ø Œşÿÿÿÿ
+Z	java:S106*"9Replace this use of System.out or System.err by a logger.(íà°öøÿÿÿÿ8Ùãş¥®0
+Z	java:S1062"9Replace this use of System.out or System.err by a logger.(ÉŞöşÿÿÿÿ8ÔÙ¦®0
+D
+java:S1125>"'Remove the unnecessary boolean literal.(ÒÇê¦8ÓÙ¦®0
+Z	java:S106@"9Replace this use of System.out or System.err by a logger.(°ş‚Úøÿÿÿÿ8ÿ•¦®0
