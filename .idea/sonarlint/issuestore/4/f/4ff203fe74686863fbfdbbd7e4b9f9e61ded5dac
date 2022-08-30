@@ -1,0 +1,27 @@
+
+y
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "nombre".(Õñúüÿÿÿÿ
+v
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "apellido".(‰Å’ã
+t
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "ciudad".(Ş¤š
+t
+java:S1488#"^Immediately return this expression instead of assigning it to the temporary variable "sector".(Š™¥ú
+p
+java:S1488("ZImmediately return this expression instead of assigning it to the temporary variable "id".(ğ£èí
+s
+java:S1488-"^Immediately return this expression instead of assigning it to the temporary variable "sueldo".(ÄØ-
+D
+java:S2140")Use "java.util.Random.nextInt()" instead.(Õñúüÿÿÿÿ
+?
+java:S2140")Use "java.util.Random.nextInt()" instead.(‰Å’ã
+D
+java:S2140")Use "java.util.Random.nextInt()" instead.(·°…üÿÿÿÿ
+>
+java:S2140")Use "java.util.Random.nextInt()" instead.(ãÊ×=
+?
+java:S2140")Use "java.util.Random.nextInt()" instead.(Ş¤š
+?
+java:S2140#")Use "java.util.Random.nextInt()" instead.(Š™¥ú
+?
+java:S2140(")Use "java.util.Random.nextInt()" instead.(ğ£èí

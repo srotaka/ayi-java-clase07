@@ -1,27 +1,35 @@
 package org.example.controllers;
 
-import org.example.dtos.ClienteDTO;
-import org.example.services.IPersonaService;
+
+import org.example.dtos.request.ClienteRequestDTO;
+import org.example.services.IClienteService;
 import org.example.services.impl.ClienteServiceImpl;
-import org.example.services.impl.PersonaServiceImpl;
+
+import java.util.List;
 
 public class ClienteController {
 
-    private IPersonaService clienteService = new ClienteServiceImpl();
+    private IClienteService clienteService = new ClienteServiceImpl();
 
-    public void insertCliente(ClienteDTO clienteDTO){
-        clienteService.insert(clienteDTO);
+    public void insertCliente(ClienteRequestDTO clienteRequestDTO){
+
+        clienteService.insertCliente(clienteRequestDTO);
     }
 
-    public void updateCliente(ClienteDTO clienteDTO){
-        clienteService.update(clienteDTO);
+    public void updateCliente(Integer id, ClienteRequestDTO clienteRequestDTO){
+
+        clienteService.updateCliente(id, clienteRequestDTO);
     }
 
-    public void getAllInfo(ClienteDTO clienteDTO){
-        clienteService.getAllInfo(clienteDTO);
+    public void getAllInfoFromClientes(List<ClienteRequestDTO> listEmpleados){
+
+        clienteService.getAllInfoFromClientes(listEmpleados);
     }
 
-    public void deleteCliente(ClienteDTO clienteDTO){
-        clienteService.delete(clienteDTO);
+    public void deleteCliente(Integer id, ClienteRequestDTO clienteRequestDTO){
+
+        clienteService.deleteCliente(id, clienteRequestDTO);
     }
+
+
 }

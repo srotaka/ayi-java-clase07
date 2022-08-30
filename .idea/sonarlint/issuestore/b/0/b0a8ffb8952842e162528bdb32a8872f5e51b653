@@ -1,0 +1,31 @@
+
+i
+java:S1192"NDefine a constant instead of duplicating this literal "
+\t- Puesto: " 3 times.(¤ÛÅùÿÿÿÿ
+m
+java:S1192"RDefine a constant instead of duplicating this literal "
+\t- Sueldo: US$ " 3 times.(¾„•æıÿÿÿÿ
+i
+java:S1192"NDefine a constant instead of duplicating this literal "
+\t- Nombre: " 3 times.(éË´—ÿÿÿÿÿ
+m
+java:S1192,"WDefine a constant instead of duplicating this literal "
+\t- Empleado Activo: " 3 times.(ØÃÖ¬
+k
+java:S1192"PDefine a constant instead of duplicating this literal "
+\t- Apellido: " 3 times.(ã÷™úÿÿÿÿ
+@
+java:S5411 "*Use the primitive boolean expression here.(šâÛ
+E
+java:S5411@"*Use the primitive boolean expression here.(§æ‡úúÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(×¯—Áıÿÿÿÿ
+=
+java:S1125 "'Remove the unnecessary boolean literal.(šâÛ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(îÙ ¡ûÿÿÿÿ
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(íà°öøÿÿÿÿ
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(Ä·
+B
+java:S1125@"'Remove the unnecessary boolean literal.(§æ‡úúÿÿÿÿ
+S	java:S106B"9Replace this use of System.out or System.err by a logger.(ÈßÆîùÿÿÿÿ
+N
+java:S1128"8Remove this unused import 'org.example.dtos.PersonaDTO'.(°õ‰ä

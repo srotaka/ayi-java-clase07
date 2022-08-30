@@ -1,28 +1,32 @@
 package org.example.controllers;
 
-import org.example.dtos.PersonaDTO;
-import org.example.entities.Persona;
+import org.example.dtos.request.PersonaRequestDTO;
 import org.example.services.IPersonaService;
 import org.example.services.impl.PersonaServiceImpl;
-import org.example.utilities.DatosRandom;
+
+import java.util.List;
 
 public class PersonaController {
 
     private IPersonaService iPersonaService = new PersonaServiceImpl();
 
-    public void insertPersona(PersonaDTO personaDTO){
-        iPersonaService.insert(personaDTO);
+    public void insertPersona(PersonaRequestDTO personaRequestDTO){
+
+        iPersonaService.insertPersona(personaRequestDTO);
     }
 
-    public void updatePersona(PersonaDTO personaDTO){
-        iPersonaService.update(personaDTO);
+    public void updatePersona(Integer id, PersonaRequestDTO personaRequestDTO){
+
+        iPersonaService.updatePersona(id, personaRequestDTO);
     }
 
-    public void getAllInfo(PersonaDTO personaDTO){
-        iPersonaService.getAllInfo(personaDTO);
+    public void getAllInfoFromPersonas(List<PersonaRequestDTO> listPersonas){
+
+        iPersonaService.getAllInfoFromPersonas(listPersonas);
     }
 
-    public void deletePersona(PersonaDTO personaDTO){
-        iPersonaService.delete(personaDTO);
+    public void deletePersona(Integer id, PersonaRequestDTO personaRequestDTO){
+
+        iPersonaService.deletePersona(id, personaRequestDTO);
     }
 }
