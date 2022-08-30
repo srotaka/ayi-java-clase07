@@ -1,68 +1,67 @@
 package org.example.services.impl;
 
-import org.example.dtos.ClienteDTO;
-import org.example.services.IPersonaService;
+import org.example.dtos.request.ClienteRequestDTO;
+import org.example.dtos.response.ClienteResponseDTO;
+import org.example.services.IClienteService;
 import org.example.utilities.DatosRandom;
 
+import java.util.List;
 
-public class ClienteServiceImpl implements IPersonaService<ClienteDTO> {
 
+public class ClienteServiceImpl implements IClienteService {
     DatosRandom datosRandom = new DatosRandom();
 
     @Override
-    public void insert(ClienteDTO clienteDTO) {
-        clienteDTO.setId(datosRandom.idRandom());
-        clienteDTO.setNombre(datosRandom.nombreRandom());
-        clienteDTO.setApellido(datosRandom.apellidoRandom());
-        clienteDTO.setEmail(clienteDTO.getNombre().toLowerCase() +"." + clienteDTO.getApellido().toLowerCase()+ "@mail.com");
-        clienteDTO.setDireccion(datosRandom.direccionRandom());
-        clienteDTO.setCiudad(datosRandom.ciudadRandom());
+    public void insertCliente(ClienteRequestDTO clienteRequestDTO) {
+        ClienteResponseDTO responseDTO = new ClienteResponseDTO();
+
+        responseDTO.setNombre(clienteRequestDTO.getNombre());
+        responseDTO.setApellido(clienteRequestDTO.getApellido());
+        responseDTO.setEmail(clienteRequestDTO.getEmail());
+        responseDTO.setDireccion(clienteRequestDTO.getDireccion());
+        responseDTO.setCiudad(clienteRequestDTO.getCiudad());
 
         System.out.println("\nInsertando datos del Cliente: " +
-                "\n\t- Nombre: " + clienteDTO.getNombre() +
-                "\n\t- Apellido: " + clienteDTO.getApellido() +
-                "\n\t- Email: " + clienteDTO.getEmail()+
-                "\n\t- Dirección: " + clienteDTO.getDireccion() +
-                "\n\t- Ciudad: " + clienteDTO.getCiudad());
+                "\n\t- ID Cliente: " + clienteRequestDTO.getIdCliente() +
+                "\n\t- Nombre: " + responseDTO.getNombre() +
+                "\n\t- Apellido: " + responseDTO.getApellido() +
+                "\n\t- Email: " + responseDTO.getEmail()+
+                "\n\t- Dirección: " + responseDTO.getDireccion() +
+                "\n\t- Ciudad: " + responseDTO.getCiudad());
+
     }
 
     @Override
-    public void update(ClienteDTO clienteDTO) {
-
-        if(clienteDTO.getActive() != false) {
-            clienteDTO.setDireccion(datosRandom.direccionRandom());
-            clienteDTO.setCiudad(datosRandom.ciudadRandom());
+    public void updateCliente(Integer id, ClienteRequestDTO clienteRequestDTO) {
+        ClienteResponseDTO responseDTO = new ClienteResponseDTO();
+        if(clienteRequestDTO.getActive() != false) {
+            clienteRequestDTO.setDireccion(datosRandom.direccionRandom());
+            clienteRequestDTO.setCiudad(datosRandom.ciudadRandom());
 
             System.out.println("\nModificando datos del Cliente: " +
-                    "\n\t- Nombre: " + clienteDTO.getNombre() +
-                    "\n\t- Apellido: " + clienteDTO.getApellido() +
-                    "\n\t- Dirección: " + clienteDTO.getDireccion() +
-                    "\n\t- Ciudad: " + clienteDTO.getCiudad());
+                    "\n\t- ID Cliente: " + clienteRequestDTO.getIdCliente() +
+                    "\n\t- Nombre: " + clienteRequestDTO.getNombre() +
+                    "\n\t- Apellido: " + clienteRequestDTO.getApellido() +
+                    "\n\t- Dirección: " + clienteRequestDTO.getDireccion() +
+                    "\n\t- Ciudad: " + clienteRequestDTO.getCiudad());
         } else{
             System.out.println("\nERROR: No se ha podido procesar el cambio de datos. " +
                     "\n\tEl cliente no forma parte de nuestra base de datos." +
-                    "\n\t- Cliente Activo: " + clienteDTO.getActive());
+                    "\n\t- Cliente Activo: " + clienteRequestDTO.getActive());
         }
     }
-
     @Override
-    public void getAllInfo(ClienteDTO clienteDTO) {
-        System.out.println("\nObteniendo datos del Cliente: " +
-                "\n\t- ID: " + clienteDTO.getId() +
-                "\n\t- Nombre: " + clienteDTO.getNombre() +
-                "\n\t- Apellido: " + clienteDTO.getApellido() +
-                "\n\t- Email: " + clienteDTO.getEmail()+
-                "\n\t- Dirección: " + clienteDTO.getDireccion() +
-                "\n\t- Ciudad: " + clienteDTO.getCiudad() +
-                "\n\t- Cliente Activo: " + clienteDTO.getActive());
+    public void getAllInfoFromClientes(List<ClienteRequestDTO> listClientes) {
+        System.out.println("\nLista de Clientes: " + listClientes.toString());
+
     }
 
     @Override
-    public void delete(ClienteDTO clienteDTO) {
-        if(clienteDTO.getActive() == true) {
-            clienteDTO.setActive(false);
-            System.out.println("\nEliminando datos del Cliente Nº " + clienteDTO.getId() +
-                    "\n\t- Cliente Activo: " + clienteDTO.getActive());
+    public void deleteCliente(Integer id, ClienteRequestDTO clienteRequestDTO) {
+        if(clienteRequestDTO.getActive() == true) {
+            clienteRequestDTO.setActive(false);
+            System.out.println("\nEliminando datos del Cliente Nº " + id +
+                    "\n\t- Cliente Activo: " + clienteRequestDTO.getActive());
         }
 
     }

@@ -1,29 +1,21 @@
 package org.example.dtos.response;
 
 public class PersonaResponseDTO {
-    private Integer id;
+
     private String nombre;
     private String apellido;
     private String ciudad;
     private Boolean isActive;
 
     public PersonaResponseDTO() {
+        this.isActive = true;
     }
 
-    public PersonaResponseDTO(Integer id, String nombre, String apellido, String ciudad, Boolean isActive) {
-        this.id = id;
+    public PersonaResponseDTO(String nombre, String apellido, String ciudad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.ciudad = ciudad;
-        this.isActive = isActive;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+        this.isActive = true;
     }
 
     public String getNombre() {

@@ -1,30 +1,33 @@
 package org.example.controllers;
 
-import org.example.dtos.EmpleadoDTO;
-import org.example.services.IPersonaService;
+import org.example.dtos.request.EmpleadoRequestDTO;
+import org.example.services.IEmpleadoService;
 import org.example.services.impl.EmpleadoServiceImpl;
+
+import java.util.List;
 
 public class EmpleadoController {
 
-    private IPersonaService empleadoService = new EmpleadoServiceImpl();
+    private IEmpleadoService empleadoService = new EmpleadoServiceImpl();
 
-    public void insertEmpleado(EmpleadoDTO empleadoDTO){
+    public void insertEmpleado(EmpleadoRequestDTO empleadoRequestDTO){
 
-        empleadoService.insert(empleadoDTO);
+        empleadoService.insertEmpleado(empleadoRequestDTO);
     }
 
-    public void updateEmpleado(EmpleadoDTO empleadoDTO){
+    public void updateEmpleado(Integer id, EmpleadoRequestDTO empleadoRequestDTO){
 
-        empleadoService.update(empleadoDTO);
+        empleadoService.updateEmpleado(id, empleadoRequestDTO);
     }
 
-    public void getAllInfo(EmpleadoDTO empleadoDTO){
+    public void getAllInfoFromEmpleados(List<EmpleadoRequestDTO> listEmpleados){
 
-        empleadoService.getAllInfo(empleadoDTO);
+        empleadoService.getAllInfoFromEmpleados(listEmpleados);
     }
 
-    public void deleteEmpleado(EmpleadoDTO empleadoDTO){
+    public void deleteEmpleado(Integer id, EmpleadoRequestDTO empleadoRequestDTO){
 
-        empleadoService.delete(empleadoDTO);
+        empleadoService.deleteEmpleado(id, empleadoRequestDTO);
     }
+
 }
