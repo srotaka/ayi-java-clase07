@@ -1,6 +1,8 @@
 package org.example.services.impl;
 
 import org.example.dtos.PersonaDTO;
+import org.example.dtos.request.PersonaRequestDTO;
+import org.example.dtos.response.PersonaResponseDTO;
 import org.example.mappers.PersonaMapper;
 import org.example.services.IPersonaService;
 import org.example.utilities.DatosRandom;
@@ -10,10 +12,10 @@ public class PersonaServiceImpl implements IPersonaService<PersonaDTO> {
 
     DatosRandom datosRandom = new DatosRandom();
     private PersonaMapper mapper;
-
+    ModelMapper modelMapper = new ModelMapper();
     @Override
     public void insert(PersonaDTO personaDTO ) {
-        //ModelMapper modelMapper = new ModelMapper();
+
 
         personaDTO.setNombre(datosRandom.nombreRandom());
         personaDTO.setApellido(datosRandom.apellidoRandom());
@@ -63,4 +65,23 @@ public class PersonaServiceImpl implements IPersonaService<PersonaDTO> {
         }
 
     }
+
+
+    public void updateDTO(PersonaRequestDTO personaRequestDTO) {
+        PersonaResponseDTO responseDTO = new PersonaResponseDTO();
+
+        if(personaRequestDTO.getActive() != false) {
+            responseDTO.setCiudad(datosRandom.ciudadRandom());
+            System.out.println("\nModificando datos de Persona:" +
+                    "\n\t- Nombre: " + responseDTO.getNombre() +
+                    "\n\t- Apellido: " + responseDTO.getApellido() +
+                    "\n\t- Ciudad: " + responseDTO.getCiudad()
+            );
+        } else {
+            System.out.println("\nERROR: No se ha podido procesar el cambio de datos. " +
+                    "\n\tLa persona no forma parte de la base de datos." +
+                    "\n\t- Persona Activa: " + responseDTO.getActive());
+        }
+    }
+
 }

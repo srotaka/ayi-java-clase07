@@ -1,0 +1,33 @@
+
+q
+java:S1192."VDefine a constant instead of duplicating this literal "
+\t- Persona Activa: " 4 times.(Ë‰‚—øÿÿÿÿ
+i
+java:S1192"NDefine a constant instead of duplicating this literal "
+\t- Ciudad: " 4 times.(‹‘Ú’øÿÿÿÿ
+d
+java:S1192"NDefine a constant instead of duplicating this literal "
+\t- Nombre: " 4 times.(«…äƒ
+k
+java:S1192"PDefine a constant instead of duplicating this literal "
+\t- Apellido: " 4 times.(åðˆïúÿÿÿÿ
+E
+java:S5411$"*Use the primitive boolean expression here.(É‹Å“øÿÿÿÿ
+E
+java:S5411="*Use the primitive boolean expression here.(·³áÍûÿÿÿÿ
+M	java:S106"9Replace this use of System.out or System.err by a logger.(ÍÑÓ=
+V	java:S125"<This block of commented-out lines of code should be removed.(žÐâÓûÿÿÿÿ
+B
+java:S1125$"'Remove the unnecessary boolean literal.(É‹Å“øÿÿÿÿ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(Œ¤À¼ýÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(íà°öøÿÿÿÿ
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(È¸é‰ýÿÿÿÿ
+B
+java:S1125="'Remove the unnecessary boolean literal.(·³áÍûÿÿÿÿ
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(€ÓØû
+=
+java:S1125I"'Remove the unnecessary boolean literal.(˜ÇÆ÷
+S	java:S106K"9Replace this use of System.out or System.err by a logger.(Œ¤À¼ýÿÿÿÿ
+S	java:S106Q"9Replace this use of System.out or System.err by a logger.(íà°öøÿÿÿÿ
+E
+java:S1068"*Remove this unused "mapper" private field.(ˆÎžàþÿÿÿÿ

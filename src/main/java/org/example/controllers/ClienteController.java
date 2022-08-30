@@ -10,14 +10,17 @@ public class ClienteController {
     private IPersonaService clienteService = new ClienteServiceImpl();
 
     public void insertCliente(ClienteDTO clienteDTO){
+
         clienteService.insert(clienteDTO);
     }
 
     public void updateCliente(ClienteDTO clienteDTO){
+
         clienteService.update(clienteDTO);
     }
 
     public void getAllInfo(ClienteDTO clienteDTO){
+
         clienteService.getAllInfo(clienteDTO);
     }
 

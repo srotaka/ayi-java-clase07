@@ -14,14 +14,17 @@ public class EmpleadoController {
     }
 
     public void updateEmpleado(EmpleadoDTO empleadoDTO){
+
         empleadoService.update(empleadoDTO);
     }
 
     public void getAllInfo(EmpleadoDTO empleadoDTO){
+
         empleadoService.getAllInfo(empleadoDTO);
     }
 
     public void deleteEmpleado(EmpleadoDTO empleadoDTO){
+
         empleadoService.delete(empleadoDTO);
     }
 }

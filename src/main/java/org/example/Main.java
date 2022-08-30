@@ -11,12 +11,11 @@ public class Main {
     public static void main(String[] args) {
 
         PersonaController personaController = new PersonaController();
-        PersonaDTO persona1 = new PersonaDTO();
-
         EmpleadoController empleadoController = new EmpleadoController();
-        EmpleadoDTO empleado1 = new EmpleadoDTO();
-
         ClienteController clienteController = new ClienteController();
+
+        PersonaDTO persona1 = new PersonaDTO();
+        EmpleadoDTO empleado1 = new EmpleadoDTO();
         ClienteDTO clienteDTO = new ClienteDTO();
 
         System.out.printf("\nDATOS PERSONAS\n");
@@ -25,6 +24,7 @@ public class Main {
         personaController.getAllInfo(persona1);
         personaController.deletePersona(persona1);
         personaController.updatePersona(persona1);
+
         System.out.println("\n...................................");
 
         System.out.printf("\nDATOS EMPLEADOS\n");
@@ -33,6 +33,7 @@ public class Main {
         empleadoController.getAllInfo(empleado1);
         empleadoController.deleteEmpleado(empleado1);
         empleadoController.updateEmpleado(empleado1);
+
         System.out.println("\n...................................");
 
         System.out.printf("\nDATOS CLIENTE\n");
